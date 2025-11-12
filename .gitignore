@@ -362,6 +362,9 @@ MigrationBackup/
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
 /Beatus.Maui/appsettings.json
-/Beatus/appsettings.json
+# Application configuration contains no secrets by default and is required
+# for the app to run. Provide a template version tracked in source control.
+# Remove the ignore rule so a safe default can be distributed with the codebase.
+#/Beatus/appsettings.json
 /Beatus/myapp.keystore
 /Beatus/mykeyStoreConfig.txt
