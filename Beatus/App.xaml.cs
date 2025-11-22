@@ -1,4 +1,6 @@
-﻿namespace Beatus
+#nullable enable
+
+namespace Beatus
 {
     public partial class App : Application
     {
