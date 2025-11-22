@@ -172,7 +172,8 @@ public partial class MainViewModel : BaseViewModel
                 var newWidth = _imageMaxResolution;
                 var newHeight = _imageMaxResolution / aspectRatio;
 
-                using var resized = original.Resize(new SKImageInfo(newWidth, (int)newHeight), SKFilterQuality.High);
+                var samplingOptions = new SKSamplingOptions(SKFilterMode.Linear, SKMipmapMode.None);
+                using var resized = original.Resize(new SKImageInfo(newWidth, (int)newHeight), samplingOptions);
                 using var image = SKImage.FromBitmap(resized);
                 using var imageData = image.Encode(SKEncodedImageFormat.Jpeg, 100);
                 result = imageData.ToArray();
